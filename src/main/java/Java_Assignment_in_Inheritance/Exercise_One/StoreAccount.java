@@ -1,5 +1,8 @@
 package Java_Assignment_in_Inheritance.Exercise_One;
 
+import lombok.Data;
+
+@Data
 public class StoreAccount extends Account{
 
     private String storeName;
@@ -30,12 +33,12 @@ public class StoreAccount extends Account{
 
     public void changeCategory(Category newCategory){
         this.accountCategory=newCategory;
-        System.out.println("The new category of Store Account is:"+accountCategory);
+        System.out.println("\nThe new category of Store Account is:"+accountCategory);
     }
     @Override
     public String toString() {
-        return super.toString()+"StoreAccount{" +
-                "storeName='" + storeName + '\'' +
+        return "Store" +super.toString()+
+                ", storeName='" + storeName + '\'' +
                 ", accountCategory='" + accountCategory + '\'' +
                 '}';
     }

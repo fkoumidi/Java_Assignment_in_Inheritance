@@ -5,17 +5,16 @@ public class Product {
     private int id;
     private String name;
     private  double priceWhenSell;
-    private double PriceWhenBuy;
+    private double priceWhenBuy;
 
-    public Product(int id, String name, double priceWhenSell, double PriceWhenBuy) {
+    public Product(int id, String name, double priceWhenSell, double priceWhenBuy) {
         this.id = id;
         this.name = name;
         this.priceWhenSell = priceWhenSell;
-        this.PriceWhenBuy = PriceWhenBuy;
+        this.priceWhenBuy = priceWhenBuy;
     }
 
     public Product() {
-
     }
 
     public int getId() {
@@ -43,10 +42,20 @@ public class Product {
     }
 
     public double getPriceWhenBuy() {
-        return PriceWhenBuy;
+        return priceWhenBuy;
     }
 
     public void setPriceWhenBuy(double priceWhenBuy) {
-        PriceWhenBuy = priceWhenBuy;
+        this.priceWhenBuy = priceWhenBuy;
+    }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", priceWhenSell=" + priceWhenSell +
+                ", priceWhenBuy=" + priceWhenBuy +
+                '}';
     }
 }

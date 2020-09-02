@@ -1,15 +1,18 @@
 package Java_Assignment_in_Inheritance.Exercise_One;
 
-import Java_Assignment_in_Inheritance.Exercise_One.Account;
-import Java_Assignment_in_Inheritance.Exercise_One.StoreAccount;
-
 public class Main {
     public static void main(String[] args) {
+        System.out.println("Task1");
         Account account = new Account("Fotis", 1000d, 15);
-        System.out.println(account.toString());
+        account.deposit(300);
+        account.withdraw(500);
+        System.out.println("\n"+account.toString());
 
-
-        StoreAccount sa = new StoreAccount("fotis", 100d, 35, "paok", Category.premium);
-        System.out.println(sa);
+        System.out.println("\n\nTask2");
+        StoreAccount sa = new StoreAccount("George", 2000d, 24, "Code.Hub", Category.mid);
+        sa.withdraw(600);
+        sa.deposit(200);
+        sa.changeCategory(Category.premium);
+        System.out.println("\n"+sa);
     }
 }
